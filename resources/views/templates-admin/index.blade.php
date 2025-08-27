@@ -134,7 +134,7 @@
                     <span>Tables</span></a>
             </li>
 
-            <!-- Divider -->
+            <!-- DIVIDER -->
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
