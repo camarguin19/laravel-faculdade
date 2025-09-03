@@ -13,7 +13,22 @@ class ClienteController extends Controller
     }
     public function recebeDados(Request $req)
     {
+        $validador = $req->validate(
+            [
+                'nome' => 'required|min:3',
+                'CPF' => 'required'
+            ],
+            [
+                "nome.required" => "O campo nome é obrigatorio",
+                "nome.min" => "Nome precisa possuir no minimo 3 caracteres",
+                "cpf.required" => "O campo CPF é obrigatorio"
+
+            ]
+
+        );
+
         echo $req->input('nome');
-        //echo 'recebe dados';
+        return redirect()->route("clientes")
+            ->with('sucess', 'Cliente incluido com sucesso');
     }
 }

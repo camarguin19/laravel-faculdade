@@ -1,8 +1,8 @@
-@extends("templates-admin.index")
+@extends('layouts.app') {{-- se você estiver usando layout base --}}
 
-@section ("conteudo")
-    <h1>Cadastro de clientes</h1>
-    <div class="row">
-        <input type="button" value="clique" class="btn btn-success"/>
+@section('content')
+    <div class="container">
+        <h1>Página de Clientes</h1>
+        <p>Esta é uma tela em branco que será usada futuramente.</p>
     </div>
 @endsection

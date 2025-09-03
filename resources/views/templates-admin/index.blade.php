@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('templates') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -366,13 +366,29 @@
 
                         <!-- Page Heading -->
                         <h1 class="h3 mb-4 text-gray-800">Formulário de Cadastro</h1>
+                        @if (session('sucess'))
+                            @if ($errors->any())
+                                @foreach ($errors->all() as $erro)
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ session('sucess') }}
+                                    </div>
+                                @endforeach
+                            @endif
+                        @endif
+
 
                         <!-- Formulário -->
                         <form method="post" action="{{ route('cliente.novo') }}" class="row g-3">
                             @csrf
                             <div class="col-md-6">
-                                <label for="" class="form-label">Nome</label>
-                                <input type="name" class="form-control" placeholder="Nome Completo">
+                                <label for="nome" class="form-label">Nome completo</label>
+                                <input type="text" class="form-control" name="nome" id="nome"
+                                    placeholder="Nome Completo" value="{{ old('nome') }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nome" class="form-label">CPF</label>
+                                <input type="" class="form-control" name="CPF" id="CPF"
+                                    placeholder="CPF">
                             </div>
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Email</label>
@@ -389,7 +405,7 @@
                                     placeholder="Marcondes Salgado 1-39">
                             </div>
                             <div class="col-12">
-                                <label for="inputAddress2" class="form-label">Endereço 2</label>
+                                <label for="inputAddress2" class="form-label">Complemento</label>
                                 <input type="text" class="form-control" id="inputAddress2"
                                     placeholder="Apartment, studio, or floor">
                             </div>

@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::get('/templates', function () {
     return view('templates.index');
-});
+})->name('templates');
 
 Route::get('/produto', function () {
     return view('produto.index');
@@ -17,7 +17,7 @@ Route::get('/produto', function () {
 
 Route::get('/clientes', function () {
     return view('clientes.index');
-});
+})->name('clientes');
 
 Route::get('/templates-admin', function () {
     return view('templates-admin.index');
