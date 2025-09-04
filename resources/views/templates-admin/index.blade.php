@@ -387,7 +387,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="nome" class="form-label">CPF</label>
-                                <input type="" class="form-control" name="CPF" id="CPF"
+                                <input type="" class="form-control" name="cpf" id="cpf"
                                     placeholder="CPF">
                             </div>
                             <div class="col-md-6">
@@ -415,10 +415,37 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="inputState" class="form-label">Estado</label>
-                                <select id="inputState" class="form-select">
-                                    <option selected>Escolha...</option>
-                                    <option>...</option>
+                                <select name="estado" id="estado" class="form-select">
+                                    <option disabled {{ old('estado') ? '' : 'selected' }}>Escolha...</option>
+                                    <option value="AC" {{ old('estado') == 'AC' ? 'selected' : '' }}>AC</option>
+                                    <option value="AL" {{ old('estado') == 'AL' ? 'selected' : '' }}>AL</option>
+                                    <option value="AP" {{ old('estado') == 'AP' ? 'selected' : '' }}>AP</option>
+                                    <option value="AM" {{ old('estado') == 'AM' ? 'selected' : '' }}>AM</option>
+                                    <option value="BA" {{ old('estado') == 'BA' ? 'selected' : '' }}>BA</option>
+                                    <option value="CE" {{ old('estado') == 'CE' ? 'selected' : '' }}>CE</option>
+                                    <option value="DF" {{ old('estado') == 'DF' ? 'selected' : '' }}>DF</option>
+                                    <option value="ES" {{ old('estado') == 'ES' ? 'selected' : '' }}>ES</option>
+                                    <option value="GO" {{ old('estado') == 'GO' ? 'selected' : '' }}>GO</option>
+                                    <option value="MA" {{ old('estado') == 'MA' ? 'selected' : '' }}>MA</option>
+                                    <option value="MT" {{ old('estado') == 'MT' ? 'selected' : '' }}>MT</option>
+                                    <option value="MS" {{ old('estado') == 'MS' ? 'selected' : '' }}>MS</option>
+                                    <option value="MG" {{ old('estado') == 'MG' ? 'selected' : '' }}>MG</option>
+                                    <option value="PA" {{ old('estado') == 'PA' ? 'selected' : '' }}>PA</option>
+                                    <option value="PB" {{ old('estado') == 'PB' ? 'selected' : '' }}>PB</option>
+                                    <option value="PR" {{ old('estado') == 'PR' ? 'selected' : '' }}>PR</option>
+                                    <option value="PE" {{ old('estado') == 'PE' ? 'selected' : '' }}>PE</option>
+                                    <option value="PI" {{ old('estado') == 'PI' ? 'selected' : '' }}>PI</option>
+                                    <option value="RJ" {{ old('estado') == 'RJ' ? 'selected' : '' }}>RJ</option>
+                                    <option value="RN" {{ old('estado') == 'RN' ? 'selected' : '' }}>RN</option>
+                                    <option value="RS" {{ old('estado') == 'RS' ? 'selected' : '' }}>RS</option>
+                                    <option value="RO" {{ old('estado') == 'RO' ? 'selected' : '' }}>RO</option>
+                                    <option value="RR" {{ old('estado') == 'RR' ? 'selected' : '' }}>RR</option>
+                                    <option value="SC" {{ old('estado') == 'SC' ? 'selected' : '' }}>SC</option>
+                                    <option value="SP" {{ old('estado') == 'SP' ? 'selected' : '' }}>SP</option>
+                                    <option value="SE" {{ old('estado') == 'SE' ? 'selected' : '' }}>SE</option>
+                                    <option value="TO" {{ old('estado') == 'TO' ? 'selected' : '' }}>TO</option>
                                 </select>
+
                             </div>
                             <div class="col-md-2">
                                 <label for="inputZip" class="form-label">CEP</label>
@@ -427,9 +454,6 @@
                             <div class="col-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">
-                                        Marque-o
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-12">
