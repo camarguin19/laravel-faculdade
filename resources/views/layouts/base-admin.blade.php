@@ -55,7 +55,7 @@
 
             <!-- Nav Item - Clientes -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('clientes') }}">
+                <a class="nav-link" href="{{ route('cadastro_clientes.index') }}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Clientes</span>
                 </a>
